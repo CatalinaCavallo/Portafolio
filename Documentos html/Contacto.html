@@ -1,20 +1,49 @@
 <html>
     <head>
+        <title> Contacto </title>
+        <link rel="stylesheet" href="Estilos/style.css">
     </head>
     <body>
         <header>
-            <h1> Contacto </h1>
-            <div>
-                <nav>
-                    <ul>
-                        <li> <a href = index.html> Inicio </a> </li>
-                        <li> <a href = habilidades.html> Habilidades </a> </li>
-                        <li> <a href = Experiencia.html> Experiencia </a> </li>
-                        <li> <a href = Proyectos.html Proyectos> Proyectos </a> </li> 
-                        <li> <a href = Contacto.html Proyectos> Contacto </a> </li> 
-                    </ul>
-                </nav>
+            <div class="content">
+                <div class="menu container">
+                    <a href="index.html" class="logo" > Julia Smith </a>  
+                    <input type= "checkbox" id="menu" />
+                    <label for="menu">
+                        <img class = "icono" src="Imágenes/menu.png">
+                    </label>
+                    <nav class="barra">
+                        <ul>
+                            <li> <a href = index.html> Inicio </a> </li>
+                            <li> <a href = habilidades.html> Habilidades </a> </li>
+                            <li> <a href = Experiencia.html> Experiencia </a> </li>
+                            <li> <a href = Proyectos.html> Proyectos </a> </li> 
+                            <li> <a href = Contacto.html> Contacto </a> </li> 
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </header>
+        <form>
+            <div>
+                <label for="name"> Nombre :</label>
+                <input id ="name" type="text">
+            </div>
+            <div>
+                <label for = "phone"> Telefono :  </label>
+                <input name = "phone" type="tel">
+            </div>
+            <div>
+                <label for ="email"> Email :</label>
+                <input name = "email" type="email">
+            </div>
+            <div>
+                <label for ="message"> Mensaje :</label>
+                <input name = "message" type="message">
+            </div>
+            <div>
+                <input class = "btn" type="button" value="Enviar">
+            </div>
+        </form>
     </body>
 </html>
