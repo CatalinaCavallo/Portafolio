@@ -10,6 +10,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+    /* Menú desplegable*/
 .container{
     max-width: 1200px;
     margin: 0 auto;
@@ -51,7 +52,7 @@ body{
 }
 
 .menu .barra ul li a:hover{
-    color:rgb(255, 180, 51);
+    color:rgb(252, 81, 133);
 }
 
 #menu{
@@ -68,29 +69,289 @@ body{
     height: auto;
 }
 
+  /* Página de inico*/
+.inicio{
+    padding: 100px 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 80px;
+    color: rgb(54, 79, 107);
+}
+
+.inicio img {
+    width: 35%;
+    max-width: 600px;
+    max-height: fit-content;
+    border-radius: 90%;
+    transform: box-shadow 0.3s;
+}
+
+.imagen:hover{
+    box-shadow: 10px 10px 20px rgb(252, 81, 133);
+}
+
+.descripcion{
+    padding-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.descripcion h1{
+    font-size: 50px;
+    font-weight: 700;
+    color: rgb(252, 81, 133);
+}
+
+.descripcion p {
+    margin-top: 20px;
+    width: 100%;
+    font-size: clamp(16px, 2vw, 30px);
+    font-weight: 500;
+    color: rgb(54, 79, 107);
+    margin-bottom: 40px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 700px;
+
+}
+
+.redes {
+    width: 90%;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.redes i {
+    border: 2px;
+    background-color: rgb(252, 81, 133);
+    border-radius: 50%;
+    padding: 20px;
+    color: rgb(245, 245, 245);
+}
+
+.redes i:hover{
+    background-color: rgb(63, 193, 201);
+}
+
+  /* Página de contacto*/
+.contacto {
+    display: flex;
+    justify-content:center;
+    gap: 70px;
+    padding: 40px;
+    background-color: rgb(176, 251, 255);
+    margin-top: 70px;
+    border-radius: 2%;
+}
+
+.informacion{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 20px;
+    justify-content:center;
+    color: rgb(245, 245, 245);
+    background-color:  rgb(63, 193, 201);
+    border-radius: 2%;
+}
+
+
+.informacion h1{
+    margin-top: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.informacion p{
+    margin-bottom: 40px;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    z-index: 10;
+}
+
+.formulario input, .formulario button{
+    width: 150%;
+    height: 50px;
+    padding: 0 10px;
+    outline: none;
+    background-color: rgb(255, 227, 227);
+    border: 3px;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+
+.formulario input{
+    background-color:rgb(245, 245, 245);
+}
+
+.formulario button{
+    background-color: rgb(63, 193, 201);
+    color: rgb(245, 245, 245);
+}
+
+.formulario button:hover{
+    cursor: pointer;
+    background-color:  rgb(252, 81, 133);
+    color: rgb(245, 245, 245);
+}
+
+
+/*habilidades*/
+
+.titulo{
+    text-align: center;
+    color: rgb(252, 81, 133);
+    font-size: 45px;
+    padding-top: 80px;
+}
+
+.contenido{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items:stretch;
+    justify-content: center;
+}
+
+.item{
+    display: flex;
+    flex: 1 1 200px;
+    max-width: 400px;
+    background-color:  rgb(252, 81, 133);
+    border-radius: 10px;
+    padding: 30px;
+    min-height: 200px;
+    min-width: 300px;
+    text-align: center;
+    margin: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.item h2{
+    position: absolute;
+    font-size: 30px;
+    color: rgb(245, 245, 245);
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    visibility: visible;
+    transition: visibility 0.3s ease, opacity 0.3s ease;
+}
+
+.item p{
+    position: absolute;
+    margin: 15px;
+    font-size: 25px;
+    color: rgb(245, 245, 245);
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s ease;
+
+}
+
+.item:hover h2{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.item:hover p{
+    visibility: visible;
+    opacity: 1;
+}
+
 @media(max-width:991px) {
+
+    /* Menú desplegable*/
+
     .content {
         min-height: 70px;
     }
+
     .menu {
         top: 0;
         padding: 20px;
     }
+
     .menu label {
         display: initial;
     }
+
     .menu .barra {
         position: absolute;
+        z-index: 15;
         top: 100%;
         left: 0;
         right: 0;
         background-color: rgb(63, 193, 201);
         display: none;
     }
+
     .menu .barra ul li {
         width: 100%;
     }
+
     #menu:checked ~ .barra {
         display: initial;
     }
+
+    /* Página de inico*/
+
+    .inicio img{
+        width: 60%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .inicio{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        padding: 50px 20px;
+        gap: 30px;
+    }
+
+    .descripcion{
+        width: 100%;
+        max-width: 90%;
+        max-width: 500px;
+    }
+
+    .descripcion h1{
+        font-size: 25px;
+    }
+
+    .descripcion p{
+        font-size: 15px;
+        width: 100%;
+        padding: 0 10px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .redes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 20px;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .redes i{
+        margin: 15px;
+        padding: 15px;
+    }
+
 }

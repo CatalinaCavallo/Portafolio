@@ -2,6 +2,8 @@
     <head>
         <title> Contacto </title>
         <link rel="stylesheet" href="Estilos/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
     </head>
     <body>
         <header>
@@ -10,7 +12,7 @@
                     <a href="index.html" class="logo" > Julia Smith </a>  
                     <input type= "checkbox" id="menu" />
                     <label for="menu">
-                        <img class = "icono" src="Imágenes/menu.png">
+                        <img class = "icono" src="Imagenes/menu.png" />
                     </label>
                     <nav class="barra">
                         <ul>
@@ -24,26 +26,46 @@
                 </div>
             </div>
         </header>
-        <form>
-            <div>
-                <label for="name"> Nombre :</label>
-                <input id ="name" type="text">
+        <section id="Contacto">
+            <div class = "contacto">
+                <div class="informacion">
+                    <div class="info">
+                    <h1> Contáctate conmigo </h1>
+                    <p> Gmail: juliasmith@gmail.com</p>
+                    <p> Teléfono: 3564-777777 </p>
+                    </div>
+                    <div class="redes">
+                        <a href="linkedin"> 
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="GitHub"> 
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="Instagram"> 
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="formulario"> 
+                    <div>
+                        <label for="name"> Nombre :</label>
+                        <input id ="name" type="text"/>
+                    </div>
+                    <div>
+                        <label for = "phone"> Telefono :  </label>
+                        <input name = "phone" type="tel" />
+                    </div>
+                    <div>
+                        <label for ="email"> Email :</label>
+                        <input name = "email" type="email"/>
+                    </div>
+                    <div>
+                        <label for ="message"> Mensaje :</label>
+                        <input name = "message" type="message"/>
+                    </div>
+                    <button> Enviar </button>
+                </form>
             </div>
-            <div>
-                <label for = "phone"> Telefono :  </label>
-                <input name = "phone" type="tel">
-            </div>
-            <div>
-                <label for ="email"> Email :</label>
-                <input name = "email" type="email">
-            </div>
-            <div>
-                <label for ="message"> Mensaje :</label>
-                <input name = "message" type="message">
-            </div>
-            <div>
-                <input class = "btn" type="button" value="Enviar">
-            </div>
-        </form>
+        </section>
     </body>
 </html>
