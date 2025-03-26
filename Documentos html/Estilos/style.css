@@ -101,7 +101,6 @@ footer{
 .descripcion{
     padding-top: 20px;
     width: 100%;
-    box-sizing: border-box;
 }
 
 .descripcion h1{
@@ -127,7 +126,6 @@ footer{
     color: rgb(54, 79, 107);
     margin-bottom: 40px;
     word-wrap: break-word;
-    overflow-wrap: break-word;
     max-width: 700px;
     text-align: justify;
 }
@@ -141,7 +139,6 @@ footer{
 }
 
 .redes i {
-    border: 2px;
     background-color: rgb(0, 116, 122);
     border-radius: 50%;
     padding: 20px;
@@ -401,7 +398,6 @@ footer{
 
     .descripcion{
         width: 100%;
-        max-width: 90%;
         max-width: 500px;
     }
 
